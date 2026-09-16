@@ -261,7 +261,8 @@
     if (c) c.textContent = new Date().toLocaleTimeString("en-CA", { timeZone: "America/Vancouver", hour12: false });
   }, 1000);
 
-  $(".logo").textContent = S.handle;
+  const logoText = $("#logo-text");
+  if (logoText) logoText.textContent = S.handle;
   bindHover(document);
   addEventListener("hashchange", route);
   route();

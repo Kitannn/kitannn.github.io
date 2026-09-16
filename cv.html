@@ -6,7 +6,8 @@
   <title>CV — Henry Tan</title>
   <meta name="description" content="Curriculum vitae of Henry Tan, game designer.">
   <meta name="theme-color" content="#080808">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080808'/><circle cx='16' cy='16' r='8' fill='none' stroke='%23f0ede6' stroke-width='1.5'/><path d='M16 4v24M4 16h24' stroke='%23f0ede6' stroke-width='1.5'/></svg>">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700;800&display=swap" rel="stylesheet">
@@ -55,11 +56,11 @@
 </head>
 <body>
   <header>
-    <a href="./">← kitannn°</a>
+    <a href="./" style="display:inline-flex;align-items:center;gap:8px"><img src="images/birbkit-256.jpg" alt="" width="22" height="22" style="width:22px;height:22px;border-radius:50%;object-fit:cover">← kitannn°</a>
     <nav><a href="./#/work">Work</a><a href="assets/resume/TAN_HENRY_RESUME.pdf" target="_blank" rel="noopener">PDF ↓</a><button type="button" onclick="print()">Print</button><button type="button" id="theme">Theme</button></nav>
   </header>
   <main id="cv"></main>
-  <script src="data.js"></script>
+  <script src="data.js?v=2"></script>
   <script>
     (() => {
       const S = window.SITE, C = S.cv;
