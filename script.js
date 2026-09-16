@@ -55,11 +55,16 @@
         <div class="work-header fade-up"><h2 class="big">Featured<br>Work</h2><a class="see-all" href="#/work">See all works →</a></div>
         <div class="work-grid">${S.work.filter((w) => w.featured).map(card).join("")}</div>
       </section>
+      ${meta("© Shots", "PG* — 05")}
+      <section class="work-wrap">
+        <div class="work-header fade-up"><h2 class="big">Photo<br>graphy</h2><a class="see-all" href="#/work">See all photos →</a></div>
+        <div class="work-grid">${S.work.filter((w) => w.featuredPhoto).map(card).join("")}</div>
+      </section>
       ${meta("© Help Center", "PG* — 07")}
       <section class="faq">
         <h2 class="big fade-up">FAQ.</h2>
         <div class="faq-grid">
-          <div class="faq-img fade-up"><img src="${esc(S.gallery[9] || S.gallery[0])}" alt="" loading="lazy"></div>
+          <div class="faq-img fade-up"><img src="${esc(S.faqImage || S.gallery[0])}" alt="" loading="lazy"></div>
           <div>${S.faq.map(([q, a]) => `
             <div class="faq-item fade-up"><button class="faq-q" aria-expanded="false"><span>${esc(q)}</span><span class="faq-icon">+</span></button><div class="faq-a">${esc(a)}</div></div>`).join("")}</div>
         </div>
@@ -122,7 +127,8 @@
         <a class="proj-back" href="#/work">← All works</a>
         <div class="proj-head">
           <div class="fade-up">${w.logo ? `<img class="proj-logo" src="${esc(w.logo)}" alt="${esc(w.title)} logo">` : ""}<div class="eyebrow">${esc(w.tag)}</div><h2 class="big">${esc(w.title)}</h2></div>
-          <div class="fade-up"><p class="proj-summary">${esc(w.summary)}</p>${w.link ? `<a class="btn" href="${esc(w.link)}" target="_blank" rel="noopener">Visit ↗</a>` : ""}</div>
+          <div class="fade-up"><p class="proj-summary">${esc(w.summary)}</p>
+            <div class="btn-row">${(w.links || (w.link ? [["Visit ↗", w.link]] : [])).map(([label, url]) => `<a class="btn" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`).join("")}</div></div>
         </div>
         <div class="proj-hero fade-up">${media(w)}</div>
         <div class="kv fade-up" style="margin:32px 0 48px">${(w.details || []).map(([k, v]) => `<div>${esc(k)}</div><div>${esc(v)}</div>`).join("")}</div>
