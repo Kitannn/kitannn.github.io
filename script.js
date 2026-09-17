@@ -79,7 +79,7 @@
           <img src="${esc(S.portrait)}" alt="${esc(S.name)}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'monogram',textContent:'${esc(S.name.split(" ").map((p) => p[0]).join(""))}'}))">
         </div></div>
         <div>
-          <div class="block about fade-up"><div class="eyebrow">// About</div><div class="about-head"><img class="about-avatar" src="${esc(S.avatar)}" alt="" width="88" height="88"><h2 class="big">Hi, I'm ${esc(S.name.split(" ")[0])}.</h2></div>${S.about.map((p) => `<p>${esc(p)}</p>`).join("")}
+          <div class="block about fade-up"><div class="eyebrow">// About</div><h2 class="big" style="margin-bottom:28px">Hi, I'm ${esc(S.name.split(" ")[0])}.</h2>${S.about.map((p) => `<p>${esc(p)}</p>`).join("")}
             <div class="btn-row"><a class="btn" href="${esc(S.resume)}" target="_blank" rel="noopener">Résumé PDF ↓</a><a class="btn" href="${esc(S.cvPage)}">View CV →</a></div></div>
           <div class="block fade-up"><div class="eyebrow">// Identity</div><div class="kv">${S.identity.map(([k, v]) => `<div>${esc(k)}</div><div>${esc(v)}</div>`).join("")}</div></div>
           <div class="block fade-up"><div class="eyebrow">// Stats + Styles</div>
@@ -89,7 +89,8 @@
             <ul class="timeline">${S.cv.experience.map((e) => `<li><div class="when">${esc(e.when)}</div><div><h3>${esc(e.role)} <span>— ${esc(e.org)}</span></h3><p>${esc(e.project || e.bullets[0])}</p></div></li>`).join("")}</ul>
             <a class="see-all" href="${esc(S.cvPage)}" style="display:inline-block;margin-top:18px">Full CV →</a></div>
           <div class="block fade-up"><div class="eyebrow">// Off the clock — <a href="https://instagram.com/k2ttan" target="_blank" rel="noopener">@k2ttan</a></div>
-            <div class="strip">${S.offClock.map((src) => `<button data-lb aria-label="Open photo"><img src="${esc(src)}" alt="" loading="lazy"></button>`).join("")}</div></div>
+            <div class="strip">${S.offClock.map((src) => `<button data-lb aria-label="Open photo"><img src="${esc(src)}" alt="" loading="lazy"></button>`).join("")}</div>
+            ${S.avatar ? `<div class="sign-off"><img class="avatar" src="${esc(S.avatar)}" alt="" width="64" height="64"><span>${esc(S.handle)}</span></div>` : ""}</div>
         </div>
       </section>
       ${footer()}`,
