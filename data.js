@@ -11,7 +11,7 @@ window.SITE = {
   resume: "assets/resume/TAN_HENRY_RESUME.pdf",
   cvPage: "cv.html",
   portrait: "images/photos/001321830020.jpg",
-  faqImage: "images/photos/001321830020.jpg",
+  faqImage: "images/birbkit-1024.jpg",
 
   about: [
     "I'm a game designer with 5+ years of development experience, specializing in content and technical design for live service titles.",
@@ -104,10 +104,10 @@ window.SITE = {
   // `logo` (optional) shows on the project page. `pos` sets the card crop (CSS object-position).
   work: [
     {
-      title: "Ghost Fox Games", tag: "Cosmic Carnage · Crater Crashers · Roblox", kind: "game", year: "2026", featured: true,
+      title: "Ghost Fox Games", tag: "Cosmic Carnage · Roblox", kind: "game", year: "2026", featured: true,
       cover: "images/games/cc-boom.jpg", pos: "50% 50%", logo: "images/games/gfg-logo.png",
       links: [["ghostfoxgames.ca ↗", "https://ghostfoxgames.ca"], ["Roblox Incubator 2026 ↗", "https://about.roblox.com/newsroom/2026/06/2026-roblox-incubator-cohort"]],
-      summary: "Game Director at Ghost Fox Games, an independent studio of seven EA veterans in the 2026 Roblox Incubator. Our lead title, Cosmic Carnage, revives classic car combat as a futuristic demolition derby of outlandish hero vehicles — Ironjaw, the Apoco-Taco food truck and more — battling across destructible arenas. The studio is also developing Crater Crashers.",
+      summary: "Game Director at Ghost Fox Games, an independent studio of seven EA veterans in the 2026 Roblox Incubator. Our lead title, Cosmic Carnage, revives classic car combat as a futuristic demolition derby, with outlandish hero vehicles battling across explosive, ever-changing arenas.",
       details: [
         ["Role", "Co-Founder / Game Director"],
         ["Games", "Cosmic Carnage, Crater Crashers"],
@@ -116,6 +116,61 @@ window.SITE = {
         ["Stack", "Roblox Studio, Luau, Rojo"],
       ],
       images: ["images/games/cc-boom.jpg", "images/games/cc-tornado.jpg", "images/games/cosmic-carnage-keyart.jpg"],
+      responsibilities: [
+        {
+          title: "Studio & Direction",
+          items: [
+            "Co-founded a studio of seven EA veterans; accepted into the 2026 Roblox Incubator",
+            "Game Director — set match structure and core gameplay systems",
+            "Shipped in 3-week sprints with clear system documentation for the team",
+          ],
+        },
+        {
+          title: "AI & NPCs",
+          items: [
+            "Built NPC behaviour with AI pathing, targeting and threat management",
+            "Scripted NPC combat — weapon aiming, shooting and friendly-fire rules",
+            "Separated AI vehicle logic from player physics; tuned NPC stats and damage",
+          ],
+        },
+        {
+          title: "Gameplay Systems",
+          items: [
+            "Built match structure with automated rounds and map rotation",
+            "Built AFK handling and late-join support",
+            "Built match start and end flow, including camera sequences and reward screens",
+            "Implemented dynamic world events and environmental hazards with configurable tuning",
+            "Wrote unit tests for event physics logic",
+          ],
+        },
+        {
+          title: "Player Systems & UI",
+          items: [
+            "Built vehicle selection and customization",
+            "Implemented shop and reward opening flows",
+            "Built HUD systems — minimap, health and shield indicators, damage feedback, onboarding guide",
+            "Integrated art-authored UI for lobby, match and results screens",
+          ],
+        },
+        {
+          title: "Controls",
+          items: [
+            "Built control schemes across mobile, gamepad, PC and console",
+            "Designed multiple mobile steering options with an auto-drive assist",
+            "Implemented combat inputs such as shielding and parrying",
+          ],
+        },
+        {
+          title: "Technical Design & Stack",
+          items: [
+            "Luau, Roblox Studio, Rojo, Git/GitHub",
+            "Server-authoritative client/server architecture with remote events and replication",
+            "Data-driven config modules and feature flags",
+            "Wrote technical design docs for core systems",
+            "Fixed memory leaks, replication issues and client/server edge cases",
+          ],
+        },
+      ],
     },
     {
       title: "The Sims: Town Stories", tag: "EA Maxis · Game Designer · Unity", kind: "game", year: "2024—2026", featured: true,
@@ -131,17 +186,52 @@ window.SITE = {
       images: [
         "images/games/sims-cover.webp",
         "images/games/sims-store-0.jpg", "images/games/sims-store-1.jpg", "images/games/sims-store-2.jpg",
-        "images/games/sims-store-3.jpg", "images/games/sims-store-4.jpg",
-        "images/games/sims-shot-3.jpg",
-        "images/games/sims-chars.webp", "images/games/sims-gameplay.webp",
-        "images/games/sims-concept1.webp", "images/games/sims-concept2.webp",
+        "images/games/sims-store-3.jpg",
+      ],
+      responsibilities: [
+        {
+          title: "Player Experience",
+          items: [
+            "Designed and iterated the first-time user experience (FTUE), introducing core systems one step at a time",
+            "Designed quests and event loops supporting player retention and progression",
+            "Used playtest feedback and gameplay data to catch friction points early",
+          ],
+        },
+        {
+          title: "Technical Design & Implementation",
+          items: [
+            "Implemented content and technical designs in Unity",
+            "Wrote technical specifications bridging design and engineering",
+            "Scripted core event logic in AMP",
+            "Prototyped feature tools in Unity (C#)",
+            "Authored technical design docs in Jira/Confluence to guide engineers on implementation and system behavior",
+          ],
+        },
+        {
+          title: "Tools",
+          items: [
+            "Designed a cinematics feature and toolset for designers",
+            "Built C# Unity tools — 3D asset loaders, cinematic tools, component organizers",
+            "Sped up team workflows and improved game performance",
+          ],
+        },
+        {
+          title: "Ownership & Collaboration",
+          items: [
+            "Owned content features and tools from the project's unannounced R&D phase",
+            "Point of contact for multiple areas of content implementation",
+            "Wrote documentation and trained designers on implementation techniques and best practices",
+            "Collaborated closely with engineers and artists; gave feedback in feature kick-offs and weekly design syncs",
+          ],
+        },
       ],
     },
     {
-      title: "EA SPORTS FC Mobile", tag: "EA · formerly FIFA Mobile · Impact Engine", kind: "game", year: "2019—2023", featured: true,
+      title: "FIFA Mobile", tag: "EA · Game Designer · Impact Engine", kind: "game", year: "2019—2023", featured: true,
       cover: "images/games/fifam-card.jpg", pos: "50% 40%", logo: "images/games/fifam-logo.png",
-      links: [["Play FC Mobile ↗", "https://www.ea.com/games/ea-sports-fc/fc-mobile"], ["World Cup deep dive ↗", "https://www.ea.com/playtesting/news/world-cup-deep-dive"]],
-      summary: "Four years on FIFA Mobile (now EA SPORTS FC Mobile), from QA automation and game security to game design and technical game design. I built front-end features and designer tools in Haxe and C++ on EA's Impact engine, tuned live gameplay, owned weekly content deploys, and supported the 2022 FIFA World Cup event that set record DAU.",
+      hero: "images/games/fifa-mobile-22.jpg",
+      links: [["World Cup deep dive ↗", "https://www.ea.com/playtesting/news/world-cup-deep-dive"]],
+      summary: "Four years on FIFA Mobile, from QA automation and game security to game design and technical game design. I built front-end features and designer tools in Haxe and C++ on EA's Impact engine, tuned live gameplay, owned weekly content deploys, and supported the 2022 FIFA World Cup event that set record DAU.",
       details: [
         ["Studio", "Electronic Arts (via Keywords Studios 2019–2022)"],
         ["Roles", "QA Dev Support III → Game Security Analyst → Game Designer → Technical Game Designer"],
@@ -149,23 +239,141 @@ window.SITE = {
         ["Stack", "Haxe, C++, Perforce, Splunk, Python, Jira"],
       ],
       images: [
-        "images/games/fifam-ultimate-team.jpg", "images/games/fifam-angles.jpg",
-        "images/games/fifam-wc-4.png", "images/games/fifam-wc-1.png", "images/games/fifam-wc-2.png",
-        "images/games/fifam-wc-3.png", "images/games/fifam-wc-5.png",
-        "images/games/fcm-gameplay.jpg", "images/games/fcm-quickmatch.jpg",
+        "images/games/fifam-ultimate-team.jpg", "images/games/fifam-angles.jpg", "images/games/fcm-gameplay.jpg",
+      ],
+      responsibilities: [
+        {
+          title: "Content Design",
+          items: [
+            "Designed multi-week live events with daily grind loops and reward progression — daily logins, currency build-ups, milestone rewards",
+            "Tuned store offers, seasonal rank rewards and gameplay balance using player feedback and telemetry",
+            "Owned weekly live content deploys and Perforce branch management",
+          ],
+        },
+        {
+          title: "Technical Design & Tools",
+          items: [
+            "Implemented technical designs for front-end features, events and designer tools in Haxe and C++ on EA's Impact engine",
+            "Prototyped and built reusable designer components",
+            "Auto-layout components that position related UI objects from a single placed origin, with all required data in one place",
+            "Cut content implementation time and made onboarding new designers faster",
+            "Audited legacy client code to find tool opportunities with no cross-feature impact",
+          ],
+        },
+        {
+          title: "Gameplay & Features",
+          items: [
+            "Designed and implemented arcade-style game modes — object placement, player AI and difficulty tuning",
+            "Tuned player attributes including running speed, shot power and dribbling speed",
+            "Built front-end feature components with engineers for use in event designs",
+            "Updated missions and objectives components with UI/UX and game designers",
+            "Introduced modern mobile systems such as combined milestones",
+          ],
+        },
+        {
+          title: "Animation Pipeline",
+          items: [
+            "Drove adoption of Unity animation tooling to upgrade existing animation workflows",
+            "Expanded animation beyond stationary loops, opening up user-triggered animations",
+            "Proved the approach with a game jam prototype and an animated nav-button demo, with no cross-feature impact",
+            "Documented the upgraded workflow and pitched it for an upcoming season",
+          ],
+        },
+        {
+          title: "Collaboration",
+          items: [
+            "Worked across game design, engineering, UI/UX art, live ops, producers and product managers",
+            "Partnered with PMs on feature prioritization and build scheduling",
+            "Scripted features in proprietary engine and visual scripting tools, plus automation scripts",
+          ],
+        },
+        {
+          title: "Highlights",
+          items: [
+            "Supported the 2022 FIFA World Cup in-game event, which drew record-breaking DAU",
+            "Built a library of compact designer components adopted by the content team",
+            "Unlocked richer, user-triggered animation through upgraded tooling",
+          ],
+        },
       ],
     },
     {
-      title: "Personal Projects", tag: "GitHub · Hackathons · Prototypes", kind: "game", year: "2015—2017", featured: true,
+      title: "Personal Projects", tag: "GitHub · Hackathons · Prototypes", kind: "game", year: "2017—2026", featured: true,
       cover: "", accent: "#3bb8f0",
-      links: [["github.com/kitannn ↗", "https://github.com/kitannn"], ["Transcribe ↗", "https://github.com/attackle/transcribe"]],
-      summary: "Side projects and game jams. Transcribe (EduHacks 2017) is a real-time transcription and captioning service built on Amazon Alexa and Google APIs. The rest are prototypes and clones I built to learn the craft: Landbird (2D infinite runner), Fleppybirb, Pong, Tetris in both Unity and Python, and snek.js.",
+      links: [["github.com/kitannn ↗", "https://github.com/kitannn"], ["Transcribe ↗", "https://github.com/a-rrivederci/transcribe"]],
+      summary: "Side projects and game jams. Transcribe (EduHacks 2017) is a real-time transcription and captioning service built on Amazon Alexa and Google APIs. The rest are prototypes and clones I built to learn the craft: Hybrid2D3D (a 2D/3D beat 'em up in Unreal Engine 5), Landbird (2D infinite runner), Fleppybirb, Pong, Tetris in both Unity and Python, and snek.js.",
       details: [
         ["Hackathon", "Transcribe — EduHacks 2017 (Alexa, Google APIs)"],
-        ["Games", "landbird, fleppybirb, pong_unity, tetris_unity, tetris_python, snek.js"],
-        ["Stack", "Unity, C#, JavaScript, Python"],
+        ["Games", "Hybrid2D3D, landbird, fleppybirb, pong_unity, tetris_unity, tetris_python, snek.js"],
+        ["Stack", "Unreal Engine 5, Blueprints, Unity, C#, React, Node.js, JavaScript, Python, Pygame"],
       ],
       images: [],
+      responsibilities: [
+        {
+          title: "Hybrid2D3D",
+          items: [
+            "Side-scrolling beat 'em up prototype with 2D sprite characters fighting in a 3D environment",
+            "Player character with flipbook animations for idle, run, jump, dash, attack, hurt and death",
+            "Enemies driven by an AI controller, with an enemy spawner and a health bar widget",
+            "Custom side-scroller game mode, parallax backgrounds and a 2D tileset",
+            "Unreal Engine 5.1, Blueprints, Paper2D, Enhanced Input, Git LFS",
+          ],
+        },
+        {
+          title: "Transcribe — EduHacks 2017",
+          items: [
+            "Real-time speech transcription and captioning service for presenters",
+            "Built the React front end that records microphone audio and streams it to Google speech-to-text",
+            "Wired the site to a Node.js server triggered by an Amazon Alexa skill (AWS Lambda)",
+            "Transcriptions shown as AR subtitles in a companion Android app",
+            "React, Node.js, Alexa Skills Kit, Google Cloud APIs, Heroku, ngrok",
+          ],
+        },
+        {
+          title: "Landbird",
+          items: [
+            "2D infinite runner built in Unity 2020",
+            "Procedural ground, obstacle and point spawners with scrolling movement",
+            "Jump and double-jump controls with animation triggers and game manager flow",
+            "Unity, C#",
+          ],
+        },
+        {
+          title: "Fleppybirb",
+          items: [
+            "Flappy Bird-style prototype in Unity 2018",
+            "Click-to-flap rigidbody physics, pipe spawner and scrolling obstacles",
+            "Score tracking with a game-over screen and replay",
+            "Unity, C#",
+          ],
+        },
+        {
+          title: "Pong & Tetris — Unity",
+          items: [
+            "Pong with 2D rigidbody physics and paddle hit-angle deflection",
+            "Tetris with grid-based collision, row clearing and piece spawning",
+            "Hold-to-move input and instant drop",
+            "Unity 2018, C#",
+          ],
+        },
+        {
+          title: "Tetris — Python",
+          items: [
+            "Full Tetris clone with rotation, row clearing and next-piece preview",
+            "Score and persistent high score saved to file",
+            "Start menu and game-over flow",
+            "Python, Pygame",
+          ],
+        },
+        {
+          title: "snek.js",
+          items: [
+            "Browser snake game rendered on HTML canvas",
+            "Keyboard controls, scoring and high scores",
+            "JavaScript, HTML",
+          ],
+        },
+      ],
     },
     {
       title: "Tokyo", tag: "Photography · Travel & Street", kind: "photo", year: "2020", featuredPhoto: true,
@@ -200,16 +408,6 @@ window.SITE = {
       summary: "Beams, mirrors and crowds inside teamLab Borderless.",
       details: [["Location", "teamLab Borderless, Odaiba"]],
       images: ["images/photos/k-031.jpg", "images/photos/k-032.jpg", "images/photos/k-033.jpg", "images/photos/k-034.jpg"],
-    },
-    {
-      title: "Bloom", tag: "Photography · Nature", kind: "photo", year: "2020—2024",
-      cover: "images/photos/k-003.jpg",
-      summary: "Cherry blossoms at Shinjuku Gyoen and Koishikawa, Mt. Fuji beyond the rails, and a sliver of moon.",
-      details: [["Subject", "Seasons"], ["Location", "Tokyo, Yamanashi, Vancouver"]],
-      images: [
-        "images/photos/k-003.jpg", "images/photos/k-001.jpg", "images/photos/k-004.jpg", "images/photos/k-005.jpg",
-        "images/photos/k-006.jpg", "images/photos/ig-05.jpg", "images/photos/ig-03.jpg", "images/photos/ig-04.jpg",
-      ],
     },
     {
       title: "Portraits", tag: "Photography · Neon & Experimental", kind: "photo", year: "2018—2020", featuredPhoto: true,

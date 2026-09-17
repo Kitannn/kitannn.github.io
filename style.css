@@ -167,6 +167,15 @@ body.light .proj-logo{filter:invert(1) hue-rotate(180deg)}
 .proj-gallery.wide{grid-template-columns:repeat(auto-fill,minmax(360px,1fr))}
 .proj-gallery.wide button{aspect-ratio:16/9}
 
+/* RESPONSIBILITIES */
+.resp{margin-top:72px;padding-top:28px;border-top:1px solid var(--line)}
+.resp-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 56px;margin-top:20px}
+.resp-group h3{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.resp-group ul{list-style:none}
+.resp-group li{position:relative;padding:8px 0 8px 22px;border-bottom:1px solid var(--line);line-height:1.55;opacity:.82}
+.resp-group li::before{content:'—';position:absolute;left:0;opacity:.4}
+@media (max-width:640px){.resp-grid{grid-template-columns:1fr;gap:32px}}
+
 /* CONTACT */
 .contact{max-width:1200px;margin:0 auto;padding:0 32px 96px}
 .contact .mail{display:inline-block;margin:28px 0 56px;font-size:clamp(22px,4.4vw,56px);font-weight:800;letter-spacing:-.02em;text-decoration:none;border-bottom:2px solid var(--line-2);word-break:break-all;transition:border-color .2s}

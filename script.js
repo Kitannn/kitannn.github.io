@@ -130,9 +130,10 @@
           <div class="fade-up"><p class="proj-summary">${esc(w.summary)}</p>
             <div class="btn-row">${(w.links || (w.link ? [["Visit ↗", w.link]] : [])).map(([label, url]) => `<a class="btn" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`).join("")}</div></div>
         </div>
-        <div class="proj-hero fade-up">${media(w)}</div>
+        <div class="proj-hero fade-up">${w.hero ? `<img src="${esc(w.hero)}" alt="${esc(w.title)}" loading="lazy">` : media(w)}</div>
         <div class="kv fade-up" style="margin:32px 0 48px">${(w.details || []).map(([k, v]) => `<div>${esc(k)}</div><div>${esc(v)}</div>`).join("")}</div>
         ${w.images && w.images.length ? `<div class="proj-gallery${w.kind === "game" ? " wide" : ""}">${w.images.map((src, j) => `<button class="fade-up" data-lb aria-label="Open image ${j + 1}"><img src="${esc(src)}" alt="${esc(w.title)} ${j + 1}" loading="lazy"></button>`).join("")}</div>` : ""}
+        ${w.responsibilities ? `<div class="resp fade-up"><div class="eyebrow">// Responsibilities</div><div class="resp-grid">${w.responsibilities.map((g) => `<div class="resp-group"><h3>${esc(g.title)}</h3><ul>${g.items.map((it) => `<li>${esc(it)}</li>`).join("")}</ul></div>`).join("")}</div></div>` : ""}
         <div class="proj-nav"><a href="#/work/${slug(prev.title)}">← ${esc(prev.title)}</a><a href="#/work/${slug(next.title)}">${esc(next.title)} →</a></div>
       </section>
       ${footer()}`;
