@@ -11,7 +11,9 @@ window.SITE = {
   resume: "assets/resume/TAN_HENRY_RESUME.pdf",
   cvPage: "cv.html",
   portrait: "images/photos/001321830020.jpg",
+  avatar: "images/birbkit-256.jpg",
   faqImage: "images/birbkit-1024.jpg",
+  faqImageCrop: false, // remove (or set true) to crop the FAQ image to portrait 4:5
 
   about: [
     "I'm a game designer with 5+ years of development experience, specializing in content and technical design for live service titles.",

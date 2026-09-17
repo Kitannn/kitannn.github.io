@@ -64,7 +64,7 @@
       <section class="faq">
         <h2 class="big fade-up">FAQ.</h2>
         <div class="faq-grid">
-          <div class="faq-img fade-up"><img src="${esc(S.faqImage || S.gallery[0])}" alt="" loading="lazy"></div>
+          <div class="faq-img fade-up${S.faqImageCrop === false ? " uncropped" : ""}"><img src="${esc(S.faqImage || S.gallery[0])}" alt="" loading="lazy"></div>
           <div>${S.faq.map(([q, a]) => `
             <div class="faq-item fade-up"><button class="faq-q" aria-expanded="false"><span>${esc(q)}</span><span class="faq-icon">+</span></button><div class="faq-a">${esc(a)}</div></div>`).join("")}</div>
         </div>
@@ -79,7 +79,7 @@
           <img src="${esc(S.portrait)}" alt="${esc(S.name)}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'monogram',textContent:'${esc(S.name.split(" ").map((p) => p[0]).join(""))}'}))">
         </div></div>
         <div>
-          <div class="block about fade-up"><div class="eyebrow">// About</div><h2 class="big" style="margin-bottom:28px">Hi, I'm ${esc(S.name.split(" ")[0])}.</h2>${S.about.map((p) => `<p>${esc(p)}</p>`).join("")}
+          <div class="block about fade-up"><div class="eyebrow">// About</div><div class="about-head"><img class="about-avatar" src="${esc(S.avatar)}" alt="" width="88" height="88"><h2 class="big">Hi, I'm ${esc(S.name.split(" ")[0])}.</h2></div>${S.about.map((p) => `<p>${esc(p)}</p>`).join("")}
             <div class="btn-row"><a class="btn" href="${esc(S.resume)}" target="_blank" rel="noopener">Résumé PDF ↓</a><a class="btn" href="${esc(S.cvPage)}">View CV →</a></div></div>
           <div class="block fade-up"><div class="eyebrow">// Identity</div><div class="kv">${S.identity.map(([k, v]) => `<div>${esc(k)}</div><div>${esc(v)}</div>`).join("")}</div></div>
           <div class="block fade-up"><div class="eyebrow">// Stats + Styles</div>
